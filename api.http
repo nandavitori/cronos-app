@@ -95,3 +95,15 @@ Content-Type: application/json
 {
   "id": 1
 }
+
+### Criar Curso
+POST http://localhost:3000/curso/create
+Content-Type: application/json
+
+{
+  "nomeCurso": "Engenharia de Software",
+  "siglaCurso": "BES"
+}
+
+### Listar Cursos
+GET http://localhost:3000/curso/all

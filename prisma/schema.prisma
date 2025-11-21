@@ -25,3 +25,9 @@ model Sala {
   nomeSala      String  @unique 
   tipoSala      String                 
 }
+
+model Curso {
+  idCurso    Int     @id @default(autoincrement())
+  nomeCurso  String  
+  siglaCurso String? // OPCIONAL->Ex:BES, EF, MAT
+}
