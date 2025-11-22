@@ -65,11 +65,12 @@ model Alocacao {
   diaSemana     String  
   horarioInicio String  
   horarioFim    String  
-  
+  dataInicio    DateTime @default(now()) 
+  dataFim       DateTime @default(now())
   // Foreign Keys
   professorId   Int
   professor     professor @relation(fields: [professorId], references: [id])  
-  
+
   disciplinaId  Int
   disciplina    Disciplina @relation(fields: [disciplinaId], references: [idDisciplina])
 

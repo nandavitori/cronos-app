@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString, IsDate } from 'class-validator';
+import { Type } from 'class-transformer';
 
 export class CreateAlocacaoDto {
     idAlocacao?: number;
@@ -29,4 +30,12 @@ export class CreateAlocacaoDto {
 
     @IsNumber()
     periodoId: number;
+
+    @Type(() => Date)
+    @IsDate()
+    dataInicio: Date;
+
+    @Type(() => Date)
+    @IsDate()
+    dataFim: Date;
 }
