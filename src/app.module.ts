@@ -8,9 +8,10 @@ import { DisciplinaModule } from './disciplina/disciplina.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { SalaModule } from './sala/sala.module';
 import { CursoModule } from './curso/curso.module';
+import { AdministradorModule } from './administrador/administrador.module';
 
 @Module({
-  imports: [ProfessorModule, DisciplinaModule, PrismaModule, SalaModule, CursoModule],
+  imports: [ProfessorModule, DisciplinaModule, PrismaModule, SalaModule, CursoModule, AdministradorModule],
   controllers: [AppController],
   providers: [AppService],
 })

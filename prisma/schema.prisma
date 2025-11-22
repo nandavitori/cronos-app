@@ -32,3 +32,10 @@ model Curso {
   siglaCurso String? // OPCIONAL->Ex:BES, EF, MAT
   corCurso   String
 }
+
+model Administrador {
+  idAdm     Int    @id @default(autoincrement())
+  nomeAdm   String
+  emailAdm  String @unique
+  senhaAdm  String 
+}
