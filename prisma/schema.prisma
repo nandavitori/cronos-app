@@ -30,4 +30,5 @@ model Curso {
   idCurso    Int     @id @default(autoincrement())
   nomeCurso  String  
   siglaCurso String? // OPCIONAL->Ex:BES, EF, MAT
+  corCurso   String
 }
