@@ -174,3 +174,41 @@ Content-Type: application/json
 
 ### Listar Periodos
 GET http://localhost:3000/periodo/all
+
+### Atualizar Periodo (UPDATE)
+PUT http://localhost:3000/periodo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "descricao": "1º Bimestre (Datas Ajustadas)",
+  "dataFim": "2025-10-15T00:00:00.000Z"
+}
+
+### Deletar Periodo (DELETE)
+DELETE http://localhost:3000/periodo/delete
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+# MÓDULO: ALOCAÇÃO 
+
+### Criar Horário
+POST http://localhost:3000/alocacao/create
+Content-Type: application/json
+
+{
+  "diaSemana": "Segunda",
+  "horarioInicio": "07:30",
+  "horarioFim": "10:00",
+  "professorId": 1,
+  "disciplinaId": 1,
+  "salaId": 1,
+  "cursoId": 1,
+  "periodoId": 1
+}
+
+### Listar Horários (Veja a mágica do Include!)
+GET http://localhost:3000/alocacao/all
